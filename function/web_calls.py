@@ -4,6 +4,10 @@ from utils import openning_text
 from datetime import datetime
 import pyttsx3
 from decouple import config
+import wikipedia
+import pywhatkit as kit
+from email.message import EmailMessage
+import smtplib
 
 USERNAME = config('USER')
 BOTNAME = config('BOTNAME')
@@ -61,3 +65,16 @@ def take_user_input():
 		speak ('Sorry, I could not recoginze, please try again')
 		query = None
 	return query
+	
+
+def search_on_wikipedia(query):
+    results = wikipedia.summary(query, sentences=2)
+    return results
+def find_my_ip():
+    ip_address = requests.get('https://api64.ipify.org?format=json').json()
+    return ip_address["ip"]
+def play_on_youtube(video):
+    kit.playonyt(video)
+
+def search_on_google(query):
+    kit.search(query)
