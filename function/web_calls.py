@@ -85,3 +85,14 @@ def search_on_google(query):
 def send_whatsapp_message(number, message):
     kit.sendwhatmsg_instantly(f"+88{number}", message)
 
+NEWS_API_KEY = config("NEWS_API_KEY")
+
+
+def get_latest_news():
+    news_headlines = []
+    res = requests.get(
+        f"https://newsapi.org/v2/top-headlines?country=bd&apiKey={NEWS_API_KEY}&category=general").json()
+    articles = res["articles"]
+    for article in articles:
+        news_headlines.append(article["title"])
+    return news_headlines[:5]
