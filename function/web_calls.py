@@ -135,3 +135,7 @@ def get_random_joke():
     }
     res = requests.get("https://icanhazdadjoke.com/", headers=headers).json()
     return res["joke"]
+
+def get_random_advice():
+    res = requests.get("https://api.adviceslip.com/advice").json()
+    return res['slip']['advice']
