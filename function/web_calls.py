@@ -128,3 +128,10 @@ def get_weather_report(city):
     temperature = res["main"]["temp"]
     feels_like = res["main"]["feels_like"]
     return weather, f"{temperature}℃", f"{feels_like}℃"
+
+def get_random_joke():
+    headers = {
+        'Accept': 'application/json'
+    }
+    res = requests.get("https://icanhazdadjoke.com/", headers=headers).json()
+    return res["joke"]
