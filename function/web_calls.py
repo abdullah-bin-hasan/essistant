@@ -1,6 +1,6 @@
 import speech_recognition as sr
 from random import choice
-from utils import openning_text
+from utils import opening_text
 from datetime import datetime
 import pyttsx3
 from decouple import config
@@ -53,7 +53,7 @@ def take_user_input():
 		print('Recognizing...')
 		query = r.recognize_google(audio, language='en-US')
 		if not 'exit' in query or 'stop' in query:
-			speak(choice(openning_text))
+			speak(choice(opening_text))
 		else:
 			hour >= datetime.now().hour
 			if hour >=21 and hour <6:
