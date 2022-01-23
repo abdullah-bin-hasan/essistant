@@ -13,7 +13,7 @@ USERNAME = config('USER')
 BOTNAME = config('BOTNAME')
 
 
-engine = pyttsx3.init('sapi5')
+engine = pyttsx3.init()
 
 # Set Rate
 engine.setProperty('rate', 190)

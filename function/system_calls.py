@@ -3,7 +3,7 @@ import subprocess as sp
 
 paths = {
     'notepad': "C:\\Program Files\\Notepad++\\notepad++.exe",
-    'vivaldi': "C:\\Windows\\System32\\vivaldi.exe"
+    'vivaldi': "C:\\Windows\\System32\\vivaldi.exe",
     'calculator': "C:\\Windows\\System32\\calc.exe"
 }
 
@@ -20,5 +20,3 @@ def open_browser():
 def open_cmd():
     os.system('start cmd')
 
-def open_calculator():
-    sp.Popen(paths['calculator'])

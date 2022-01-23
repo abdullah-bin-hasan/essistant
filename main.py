@@ -1,7 +1,9 @@
 import requests
-from function.web_calls import find_my_ip, get_latest_news, get_random_advice, get_random_joke, get_weather_report, play_on_youtube, search_on_google, search_on_wikipedia, send_email, send_whatsapp_message
+from function.web_calls import greet_user, take_user_input, find_my_ip, get_latest_news, get_random_advice, get_random_joke, get_weather_report, play_on_youtube, search_on_google, search_on_wikipedia, send_email, send_whatsapp_message
 from function.system_calls import open_camera, open_notepad, open_browser, open_cmd
 from pprint import pprint
+
+
 
 
 if __name__ == '__main__':
